@@ -5,13 +5,9 @@ export type Challenge = {
 }
 
 export const WORDS: Challenge[] = [
-  { id: 1, word: "CSS", tip: "Linguagem de estilos" },
-  { id: 2, word: "REACT", tip: "Biblioteca para criar interfaces Web" },
-  { id: 3, word: "HTML", tip: "Linguagem de marcação" },
-  {
-    id: 4,
-    word: "Javascript",
-    tip: "Uma das linguagens de programação mais utilizadas no mundo",
-  },
-  { id: 5, word: "Typescript", tip: "Para adicionar tipagem no Javascript" },
+  { id: 1, word: "Olive", tip: "Protagonista da história" },
+  { id: 2, word: "Adam", tip: "Professor e interesse amoroso" },
+  { id: 3, word: "Stanford", tip: "Universidade onde a história acontece" },
+  { id: 4, word: "Ciência", tip: "Área de estudo da protagonista" },
+  { id: 5, word: "Beijar", tip: "Acontece logo no início do livro" },
 ]
