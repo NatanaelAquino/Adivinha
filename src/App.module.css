@@ -7,14 +7,15 @@
   align-items: center;
 }
 
-.container main{
+.container main {
   width: 556px;
   background-color: #FFFFFF;
   padding: 2rem;
   padding-top: 4.5rem;
   border-radius: 0.75rem;
 }
-.container .word{
+
+.container .word {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -23,8 +24,31 @@
 
   margin: 2.5rem 0;
 }
-.guess{
+
+.guess {
   display: flex;
   gap: 0.75rem;
   margin-top: 0.;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake{
+  animation: shake 0.3s ease-out;
 }

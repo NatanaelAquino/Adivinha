@@ -17,6 +17,8 @@ export default function App() {
   const [challenge, setChallenge] = useState<Challenge | null>()
   const ATTEMPTS_MAX = 3
 
+  const [shake, setShake] = useState(false)
+
   function handlRestartGame() {
     const isConfirmed = window.confirm("Você tem certeza que deseja reiniciar?")
 
@@ -66,6 +68,11 @@ export default function App() {
     setScore(currentScore)
     setLetter("")
 
+    if (!correct) {
+      setShake(true)
+      setTimeout(() => setShake(false), 300)
+    }
+
   }
 
   function endGames(message: string) {
@@ -102,7 +109,7 @@ export default function App() {
           max={challenge?.word.length + ATTEMPTS_MAX}
           onRestart={handlRestartGame} />
         <Tip tip={challenge.tip} />
-        <div className={styles.word}>
+        <div className={`${styles.word} ${shake && styles.shake}`}>
           {
             challenge.word.split("").map((letter, index) => {
               const letterUsed = letters.
